@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { DollarSign, Users, ShoppingBag, Eye, ArrowDownRight, ArrowUpRight } from "lucide-react";
 
 const overviewData = [
-	{ name: "Revenue", value: "$1,234,567", change: 12.5, icon: DollarSign },
-	{ name: "Users", value: "45,678", change: 8.3, icon: Users },
-	{ name: "Orders", value: "9,876", change: -3.2, icon: ShoppingBag },
-	{ name: "Page Views", value: "1,234,567", change: 15.7, icon: Eye },
+	{ name: "Receita", value: "R$ 1.234.567", change: 12.5, icon: DollarSign },
+	{ name: "Usuários", value: "45.678", change: 8.3, icon: Users },
+	{ name: "Pedidos", value: "9.876", change: -3.2, icon: ShoppingBag },
+	{ name: "Visualizações de página", value: "1.234.567", change: 15.7, icon: Eye },
 ];
 
 const OverviewCards = () => {
@@ -42,7 +42,7 @@ const OverviewCards = () => {
 					>
 						{item.change >= 0 ? <ArrowUpRight size='20' /> : <ArrowDownRight size='20' />}
 						<span className='ml-1 text-sm font-medium'>{Math.abs(item.change)}%</span>
-						<span className='ml-2 text-sm text-gray-400'>vs last period</span>
+						<span className='ml-2 text-sm text-gray-400'>vs último período</span>
 					</div>
 				</motion.div>
 			))}

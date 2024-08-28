@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const userGrowthData = [
 	{ month: "Jan", users: 1000 },
-	{ month: "Feb", users: 1500 },
+	{ month: "Fev", users: 1500 },
 	{ month: "Mar", users: 2000 },
-	{ month: "Apr", users: 3000 },
-	{ month: "May", users: 4000 },
+	{ month: "Abr", users: 3000 },
+	{ month: "Mai", users: 4000 },
 	{ month: "Jun", users: 5000 },
 ];
 
@@ -18,7 +18,7 @@ const UserGrowthChart = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.3 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>User Growth</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Crescimento do Usuário</h2>
 			<div className='h-[320px]'>
 				<ResponsiveContainer width='100%' height='100%'>
 					<LineChart data={userGrowthData}>

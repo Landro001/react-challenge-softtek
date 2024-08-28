@@ -2,11 +2,11 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 import { motion } from "framer-motion";
 
 const productPerformanceData = [
-	{ name: "Product A", sales: 4000, revenue: 2400, profit: 2400 },
-	{ name: "Product B", sales: 3000, revenue: 1398, profit: 2210 },
-	{ name: "Product C", sales: 2000, revenue: 9800, profit: 2290 },
-	{ name: "Product D", sales: 2780, revenue: 3908, profit: 2000 },
-	{ name: "Product E", sales: 1890, revenue: 4800, profit: 2181 },
+	{ name: "Produto A", vendas: 4000, receita: 2400, lucro: 2400 },
+	{ name: "Produto B", vendas: 3000, receita: 1398, lucro: 2210 },
+	{ name: "Produto C", vendas: 2000, receita: 9800, lucro: 2290 },
+	{ name: "Produto D", vendas: 2780, receita: 3908, lucro: 2000 },
+	{ name: "Produto E", vendas: 1890, receita: 4800, lucro: 2181 },
 ];
 
 const ProductPerformance = () => {
@@ -17,7 +17,7 @@ const ProductPerformance = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.4 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Product Performance</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Desempenho do Produto</h2>
 			<div style={{ width: "100%", height: 300 }}>
 				<ResponsiveContainer>
 					<BarChart data={productPerformanceData}>
@@ -32,9 +32,9 @@ const ProductPerformance = () => {
 							itemStyle={{ color: "#E5E7EB" }}
 						/>
 						<Legend />
-						<Bar dataKey='sales' fill='#8B5CF6' />
-						<Bar dataKey='revenue' fill='#10B981' />
-						<Bar dataKey='profit' fill='#F59E0B' />
+						<Bar dataKey='vendas' fill='#8B5CF6' />
+						<Bar dataKey='receita' fill='#10B981' />
+						<Bar dataKey='lucro' fill='#F59E0B' />
 					</BarChart>
 				</ResponsiveContainer>
 			</div>

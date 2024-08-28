@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const dailyOrdersData = [
-	{ date: "07/01", orders: 45 },
-	{ date: "07/02", orders: 52 },
-	{ date: "07/03", orders: 49 },
-	{ date: "07/04", orders: 60 },
-	{ date: "07/05", orders: 55 },
-	{ date: "07/06", orders: 58 },
-	{ date: "07/07", orders: 62 },
+	{ date: "07/01", pedidos: 45 },
+	{ date: "07/02", pedidos: 52 },
+	{ date: "07/03", pedidos: 49 },
+	{ date: "07/04", pedidos: 60 },
+	{ date: "07/05", pedidos: 55 },
+	{ date: "07/06", pedidos: 58 },
+	{ date: "07/07", pedidos: 62 },
 ];
 
 const DailyOrders = () => {
@@ -19,7 +19,7 @@ const DailyOrders = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.2 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Daily Orders</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Pedidos diários</h2>
 
 			<div style={{ width: "100%", height: 300 }}>
 				<ResponsiveContainer>
@@ -35,7 +35,7 @@ const DailyOrders = () => {
 							itemStyle={{ color: "#E5E7EB" }}
 						/>
 						<Legend />
-						<Line type='monotone' dataKey='orders' stroke='#8B5CF6' strokeWidth={2} />
+						<Line type='monotone' dataKey='pedidos' stroke='#8B5CF6' strokeWidth={2} />
 					</LineChart>
 				</ResponsiveContainer>
 			</div>

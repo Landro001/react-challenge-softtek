@@ -11,19 +11,19 @@ const Notifications = () => {
 	});
 
 	return (
-		<SettingSection icon={Bell} title={"Notifications"}>
+		<SettingSection icon={Bell} title={"Notificações"}>
 			<ToggleSwitch
-				label={"Push Notifications"}
+				label={"Notificações instantâneas"}
 				isOn={notifications.push}
 				onToggle={() => setNotifications({ ...notifications, push: !notifications.push })}
 			/>
 			<ToggleSwitch
-				label={"Email Notifications"}
+				label={"Notificações por e-mail"}
 				isOn={notifications.email}
 				onToggle={() => setNotifications({ ...notifications, email: !notifications.email })}
 			/>
 			<ToggleSwitch
-				label={"SMS Notifications"}
+				label={"Notificações por SMS"}
 				isOn={notifications.sms}
 				onToggle={() => setNotifications({ ...notifications, sms: !notifications.sms })}
 			/>

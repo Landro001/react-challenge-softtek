@@ -3,11 +3,11 @@ import { Edit, Search, Trash2 } from "lucide-react";
 import { useState } from "react";
 
 const PRODUCT_DATA = [
-	{ id: 1, name: "Wireless Earbuds", category: "Electronics", price: 59.99, stock: 143, sales: 1200 },
-	{ id: 2, name: "Leather Wallet", category: "Accessories", price: 39.99, stock: 89, sales: 800 },
-	{ id: 3, name: "Smart Watch", category: "Electronics", price: 199.99, stock: 56, sales: 650 },
-	{ id: 4, name: "Yoga Mat", category: "Fitness", price: 29.99, stock: 210, sales: 950 },
-	{ id: 5, name: "Coffee Maker", category: "Home", price: 79.99, stock: 78, sales: 720 },
+	{ id: 1, name: "Fones de Ouvido Wireless", category: "Eletrônicos", price: 59.99, stock: 143, sales: 1200 },
+	{ id: 2, name: "Carteira de Couro", category: "Acessórios", price: 39.99, stock: 89, sales: 800 },
+	{ id: 3, name: "Relógio Inteligente", category: "Eletrônicos", price: 199.99, stock: 56, sales: 650 },
+	{ id: 4, name: "Tapete de Ioga", category: "Fitness", price: 29.99, stock: 210, sales: 950 },
+	{ id: 5, name: "Cafeteira", category: "Casa", price: 79.99, stock: 78, sales: 720 },
 ];
 
 const ProductsTable = () => {
@@ -32,7 +32,7 @@ const ProductsTable = () => {
 			transition={{ delay: 0.2 }}
 		>
 			<div className='flex justify-between items-center mb-6'>
-				<h2 className='text-xl font-semibold text-gray-100'>Product List</h2>
+				<h2 className='text-xl font-semibold text-gray-100'>Lista de Produtos</h2>
 				<div className='relative'>
 					<input
 						type='text'
@@ -50,22 +50,22 @@ const ProductsTable = () => {
 					<thead>
 						<tr>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Name
+								Nome
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Category
+								Categoria
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Price
+								Preço
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Stock
+								Estoque
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Sales
+								Vendas
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Actions
+								Ações
 							</th>
 						</tr>
 					</thead>
@@ -92,7 +92,7 @@ const ProductsTable = () => {
 								</td>
 
 								<td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>
-									${product.price.toFixed(2)}
+									R${product.price.toFixed(2)}
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>{product.stock}</td>
 								<td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>{product.sales}</td>

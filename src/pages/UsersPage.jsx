@@ -18,7 +18,7 @@ const userStats = {
 const UsersPage = () => {
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>
-			<Header title='Users' />
+			<Header title='Usuários' />
 
 			<main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
 				{/* STATS */}
@@ -29,19 +29,19 @@ const UsersPage = () => {
 					transition={{ duration: 1 }}
 				>
 					<StatCard
-						name='Total Users'
+						name='Total de Usuários'
 						icon={UsersIcon}
 						value={userStats.totalUsers.toLocaleString()}
 						color='#6366F1'
 					/>
-					<StatCard name='New Users Today' icon={UserPlus} value={userStats.newUsersToday} color='#10B981' />
+					<StatCard name='Novos Usuários Hoje' icon={UserPlus} value={userStats.newUsersToday} color='#10B981' />
 					<StatCard
-						name='Active Users'
+						name='Usuários Ativos'
 						icon={UserCheck}
 						value={userStats.activeUsers.toLocaleString()}
 						color='#F59E0B'
 					/>
-					<StatCard name='Churn Rate' icon={UserX} value={userStats.churnRate} color='#EF4444' />
+					<StatCard name='Taxa de Rotatividade' icon={UserX} value={userStats.churnRate} color='#EF4444' />
 				</motion.div>
 
 				<UsersTable />

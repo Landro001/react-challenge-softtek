@@ -2,14 +2,14 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { motion } from "framer-motion";
 
 const userRetentionData = [
-	{ name: "Week 1", retention: 100 },
-	{ name: "Week 2", retention: 75 },
-	{ name: "Week 3", retention: 60 },
-	{ name: "Week 4", retention: 50 },
-	{ name: "Week 5", retention: 45 },
-	{ name: "Week 6", retention: 40 },
-	{ name: "Week 7", retention: 38 },
-	{ name: "Week 8", retention: 35 },
+	{ name: "Semana 1", retenção: 100 },
+	{ name: "Semana 2", retenção: 75 },
+	{ name: "Semana 3", retenção: 60 },
+	{ name: "Semana 4", retenção: 50 },
+	{ name: "Semana 5", retenção: 45 },
+	{ name: "Semana 6", retenção: 40 },
+	{ name: "Semana 7", retenção: 38 },
+	{ name: "Semana 8", retenção: 35 },
 ];
 
 const UserRetention = () => {
@@ -20,7 +20,7 @@ const UserRetention = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.5 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>User Retention</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Retenção de usuários</h2>
 			<div style={{ width: "100%", height: 300 }}>
 				<ResponsiveContainer>
 					<LineChart data={userRetentionData}>
@@ -35,7 +35,7 @@ const UserRetention = () => {
 							itemStyle={{ color: "#E5E7EB" }}
 						/>
 						<Legend />
-						<Line type='monotone' dataKey='retention' stroke='#8B5CF6' strokeWidth={2} />
+						<Line type='monotone' dataKey='retenção' stroke='#8B5CF6' strokeWidth={2} />
 					</LineChart>
 				</ResponsiveContainer>
 			</div>
