@@ -21,8 +21,8 @@ const OverviewPage = () => {
 					transition={{ duration: 1 }}
 				>
 					<StatCard name='Vendas Totais' icon={Zap} value='R$12.345' color='#6366F1' />
-					<StatCard name='Novos Usuários' icon={Users} value='1.234' color='#8B5CF6' />
-					<StatCard name='Total de Produtos' icon={ShoppingBag} value='567' color='#EC4899' />
+					<StatCard name='Novos Clientes' icon={Users} value='1.234' color='#8B5CF6' />
+					<StatCard name='Total de Demandas' icon={ShoppingBag} value='567' color='#EC4899' />
 					<StatCard name='Taxa de Conversão' icon={BarChart2} value='12.5%' color='#10B981' />
 				</motion.div>
 

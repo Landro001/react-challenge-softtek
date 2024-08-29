@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 const categoryData = [
-	{ name: "Eletrônicos", value: 4500 },
-	{ name: "Roupas", value: 3200 },
-	{ name: "Casa e jardim", value: 2800 },
-	{ name: "Livros", value: 2100 },
-	{ name: "Esportes", value: 1900 },
+	{ name: "Projetos", value: 4200 },
+	{ name: "Manutenção", value: 3100 },
+	{ name: "Melhoria", value: 2200 },
+	{ name: "Suporte", value: 2100 },
+	{ name: "Perfis", value: 1700 },
+	{ name: "Transporte", value: 1200 },
 ];
 
 const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
