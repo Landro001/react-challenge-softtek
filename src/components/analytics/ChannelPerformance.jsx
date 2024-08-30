@@ -2,14 +2,11 @@ import { motion } from "framer-motion";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const channelData = [
-	{ name: "Pesquisa Orgânica", value: 4000 },
-	{ name: "Pesquisa paga", value: 3000 },
-	{ name: "Direta", value: 2000 },
-	{ name: "Mídias Sociais", value: 2780 },
-	{ name: "Referência", value: 1890 },
-	{ name: "Email", value: 2390 },
+	{ name: "N1", value: 3 },
+	{ name: "N2", value: 2 },
+	{ name: "N3", value: 3 },
 ];
-const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE", "#00C49F"];
+const COLORS = ["#8884d8", "#82ca9d", "#ffc658"];
 
 const ChannelPerformance = () => {
 	return (
@@ -19,7 +16,7 @@ const ChannelPerformance = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.3 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Desempenho do Canal</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Nível de complexidade</h2>
 			<div style={{ width: "100%", height: 300 }}>
 				<ResponsiveContainer>
 					<PieChart>

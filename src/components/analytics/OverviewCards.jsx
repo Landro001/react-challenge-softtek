@@ -1,16 +1,15 @@
 import { motion } from "framer-motion";
-import { DollarSign, Users, ShoppingBag, Eye, ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { DollarSign, Clipboard, Target, ArrowDownRight, ArrowUpRight } from "lucide-react";
 
 const overviewData = [
-	{ name: "Receita", value: "R$ 1.234.567", change: 12.5, icon: DollarSign },
-	{ name: "Usuários", value: "45.678", change: 8.3, icon: Users },
-	{ name: "Pedidos", value: "9.876", change: -3.2, icon: ShoppingBag },
-	{ name: "Visualizações de página", value: "1.234.567", change: 15.7, icon: Eye },
+	{ name: "Prev. Contratos", value: "1949", change: 5.1, icon: Clipboard },
+	{ name: "Prev. Demandas", value: "1353", change: 9.6, icon: Target },
+	{ name: "Prev. Lucro", value: "R$ 526.370", change: -3.1, icon: DollarSign },
 ];
 
 const OverviewCards = () => {
 	return (
-		<div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8'>
+		<div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-8'>
 			{overviewData.map((item, index) => (
 				<motion.div
 					key={item.name}

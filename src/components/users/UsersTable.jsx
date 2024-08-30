@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 
 const userData = [
-	{ id: 1, name: "John Doe", email: "john@example.com", role: "Cliente", status: "Ativo" },
-	{ id: 2, name: "Jane Smith", email: "jane@example.com", role: "Administrador", status: "Ativo" },
-	{ id: 3, name: "Bob Johnson", email: "bob@example.com", role: "Cliente", status: "Inativo" },
-	{ id: 4, name: "Alice Brown", email: "alice@example.com", role: "Cliente", status: "Ativo" },
-	{ id: 5, name: "Charlie Wilson", email: "charlie@example.com", role: "Moderador", status: "Ativo" },
+	{ id: 12621, name: "John Doe", role: "Expert", status: "Ativo", activity:"Líder / Consultor" },
+	{ id: 75845, name: "Jane Smith", role: "Senior", status: "Ativo", activity:"Consultor" },
+	{ id: 48463, name: "Bob Johnson", role: "Junior", status: "Ausente", activity:"Consultor" },
+	{ id: 33619, name: "Alice Brown", role: "Pleno", status: "Ativo", activity:"Líder" },
+	{ id: 60136, name: "Charlie Wilson", role: "Junior", status: "Ausente", activity:"Consultor" },
+	{ id: 92131, name: "Angel McLaughlin", role: "Estagiário", status: "Ausente", activity:"Líder / Consultor" },
+	{ id: 88441, name: "Johanna Delgado", role: "Estagiário", status: "Ativo", activity:"Líder / Consultor" },
+	{ id: 60657, name: "Edith Lowe", role: "Senior", status: "Ativo", activity:"Consultor" },
 ];
 
 const UsersTable = () => {
@@ -31,11 +34,11 @@ const UsersTable = () => {
 			transition={{ delay: 0.2 }}
 		>
 			<div className='flex justify-between items-center mb-6'>
-				<h2 className='text-xl font-semibold text-gray-100'>Usuários</h2>
+				<h2 className='text-xl font-semibold text-gray-100'>Consultores</h2>
 				<div className='relative'>
 					<input
 						type='text'
-						placeholder='Search users...'
+						placeholder='Pesquisar'
 						className='bg-gray-700 text-white placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
 						value={searchTerm}
 						onChange={handleSearch}
@@ -52,16 +55,16 @@ const UsersTable = () => {
 								Nome
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Email
+								ID
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Cargo
+								Senioridade
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
 								Status
 							</th>
 							<th className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
-								Ações
+								Atividade
 							</th>
 						</tr>
 					</thead>
@@ -88,7 +91,7 @@ const UsersTable = () => {
 								</td>
 
 								<td className='px-6 py-4 whitespace-nowrap'>
-									<div className='text-sm text-gray-300'>{user.email}</div>
+									<div className='text-sm text-gray-300'>{user.id}</div>
 								</td>
 								<td className='px-6 py-4 whitespace-nowrap'>
 									<span className='px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-800 text-blue-100'>
@@ -101,16 +104,17 @@ const UsersTable = () => {
 										className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
 											user.status === "Ativo"
 												? "bg-green-800 text-green-100"
-												: "bg-red-800 text-red-100"
+												: "bg-yellow-600 text-red-100"
 										}`}
 									>
 										{user.status}
 									</span>
 								</td>
-
-								<td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>
-									<button className='text-indigo-400 hover:text-indigo-300 mr-2'>Editar</button>
-									<button className='text-red-400 hover:text-red-300'>Deletar</button>
+								
+								<td className='px-6 py-4 whitespace-nowrap'>
+									<span className='px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-600 text-blue-100'>
+										{user.activity}
+									</span>
 								</td>
 							</motion.tr>
 						))}

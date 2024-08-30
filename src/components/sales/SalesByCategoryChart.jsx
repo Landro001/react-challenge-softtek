@@ -1,14 +1,11 @@
 import { motion } from "framer-motion";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 const salesByCategory = [
-	{ name: "Eletrônicos", value: 400 },
-	{ name: "Roupas", value: 300 },
-	{ name: "Casa e Jardim", value: 200 },
-	{ name: "Livros", value: 100 },
-	{ name: "Outros", value: 150 },
+	{ name: "Basis", value: 5 },
+	{ name: "Funcional", value: 11 },
 ];
 
-const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
+const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE", "#32CD32", "#FF3131", "#F59E0B"];
 
 const SalesByCategoryChart = () => {
 	return (
@@ -18,7 +15,7 @@ const SalesByCategoryChart = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.3 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Vendas por Categoria</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Tipo de Contrato</h2>
 
 			<div style={{ width: "100%", height: 300 }}>
 				<ResponsiveContainer>

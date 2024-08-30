@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 const dailySalesData = [
-	{ name: "Seg", sales: 1000 },
-	{ name: "Ter", sales: 1200 },
-	{ name: "Qua", sales: 900 },
-	{ name: "Qui", sales: 1100 },
-	{ name: "Sex", sales: 1300 },
-	{ name: "Sab", sales: 1600 },
-	{ name: "Dom", sales: 1400 },
+	{ name: "Jan", sales: 1000 },
+	{ name: "Fev", sales: 1200 },
+	{ name: "Mar", sales: 900 },
+	{ name: "Abr", sales: 1100 },
+	{ name: "Mai", sales: 1300 },
+	{ name: "Jun", sales: 1600 },
+	{ name: "Jul", sales: 1400 },
 ];
 
 const DailySalesTrend = () => {
@@ -19,7 +19,7 @@ const DailySalesTrend = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.4 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Tendência Diária de Vendas</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Tendência Mensal de Contratos</h2>
 
 			<div style={{ width: "100%", height: 300 }}>
 				<ResponsiveContainer>

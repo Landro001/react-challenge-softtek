@@ -2,22 +2,22 @@ import { motion } from "framer-motion";
 
 import Header from "../components/common/Header";
 import StatCard from "../components/common/StatCard";
-import { CreditCard, DollarSign, ShoppingCart, TrendingUp } from "lucide-react";
+import { Eye, DollarSign, Clipboard, TrendingUp } from "lucide-react";
 import SalesOverviewChart from "../components/sales/SalesOverviewChart";
 import SalesByCategoryChart from "../components/sales/SalesByCategoryChart";
 import DailySalesTrend from "../components/sales/DailySalesTrend";
 
 const salesStats = {
-	totalRevenue: "R$1.234.567",
-	averageOrderValue: "$78.90",
-	conversionRate: "3.45%",
+	totalRevenue: "R$ 1.234.567",
+	averageOrderValue: "1854",
+	prevision: "R$ 1.471.157",
 	salesGrowth: "12.3%",
 };
 
 const SalesPage = () => {
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>
-			<Header title='Vendas' />
+			<Header title='Contratos' />
 
 			<main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
 				{/* SALES STATS */}
@@ -27,20 +27,20 @@ const SalesPage = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1 }}
 				>
-					<StatCard name='Receita Total' icon={DollarSign} value={salesStats.totalRevenue} color='#6366F1' />
+					<StatCard name='Receita Total' icon={DollarSign} value={salesStats.totalRevenue} color='#10B981' />
 					<StatCard
-						name='Média Valor do Pedido'
-						icon={ShoppingCart}
+						name='Número de Contratos'
+						icon={Clipboard}
 						value={salesStats.averageOrderValue}
-						color='#10B981'
+						color='#6366F1'
 					/>
 					<StatCard
-						name='Taxa de conversão'
-						icon={TrendingUp}
-						value={salesStats.conversionRate}
+						name='Previsão Mês Seguinte'
+						icon={Eye}
+						value={salesStats.prevision}
 						color='#F59E0B'
 					/>
-					<StatCard name='Crescimento de vendas' icon={CreditCard} value={salesStats.salesGrowth} color='#EF4444' />
+					<StatCard name='Taxa de Crescimento' icon={TrendingUp} value={salesStats.salesGrowth} color='#10B950' />
 				</motion.div>
 
 				<SalesOverviewChart />

@@ -1,24 +1,21 @@
-import { UserCheck, UserPlus, UsersIcon, UserX } from "lucide-react";
+import { UserCheck, UserPlus, UsersIcon, UserPen } from "lucide-react";
 import { motion } from "framer-motion";
 
 import Header from "../components/common/Header";
 import StatCard from "../components/common/StatCard";
 import UsersTable from "../components/users/UsersTable";
-import UserGrowthChart from "../components/users/UserGrowthChart";
-import UserActivityHeatmap from "../components/users/UserActivityHeatmap";
-import UserDemographicsChart from "../components/users/UserDemographicsChart";
 
 const userStats = {
-	totalUsers: 152845,
+	totalUsers: 1573,
 	newUsersToday: 243,
-	activeUsers: 98520,
-	churnRate: "2.4%",
+	activeUsers: 943,
+	churnRate: "60%",
 };
 
 const UsersPage = () => {
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>
-			<Header title='Usuários' />
+			<Header title='Consultores' />
 
 			<main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
 				{/* STATS */}
@@ -29,29 +26,22 @@ const UsersPage = () => {
 					transition={{ duration: 1 }}
 				>
 					<StatCard
-						name='Total de Usuários'
+						name='Total de Consultores'
 						icon={UsersIcon}
 						value={userStats.totalUsers.toLocaleString()}
 						color='#6366F1'
 					/>
-					<StatCard name='Novos Usuários Hoje' icon={UserPlus} value={userStats.newUsersToday} color='#10B981' />
+					<StatCard name='Consultores Disponíveis' icon={UserCheck} value={userStats.newUsersToday} color='#10B981' />
 					<StatCard
-						name='Usuários Ativos'
-						icon={UserCheck}
+						name='Consultores em Atividade'
+						icon={UserPen}
 						value={userStats.activeUsers.toLocaleString()}
 						color='#F59E0B'
 					/>
-					<StatCard name='Taxa de Rotatividade' icon={UserX} value={userStats.churnRate} color='#EF4444' />
+					<StatCard name='Taxa de Consultores Disponíveis' icon={UserPlus} value={userStats.churnRate} color='#10B950' />
 				</motion.div>
 
 				<UsersTable />
-
-				{/* USER CHARTS */}
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8'>
-					<UserGrowthChart />
-					<UserActivityHeatmap />
-					<UserDemographicsChart />
-				</div>
 			</main>
 		</div>
 	);

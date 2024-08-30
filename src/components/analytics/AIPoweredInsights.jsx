@@ -1,26 +1,21 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Users, ShoppingBag, DollarSign } from "lucide-react";
+import { Code, Users, CalendarArrowDown } from "lucide-react";
 
 const INSIGHTS = [
 	{
-		icon: TrendingUp,
-		color: "text-green-500",
-		insight: "A receita aumentou 15% em relação ao mês passado, impulsionada principalmente por uma campanha de e-mail bem-sucedida.",
+		icon: Code,
+		color: "text-red-500",
+		insight: "Necessidade de 3 consultores Júnior a mais",
 	},
 	{
 		icon: Users,
 		color: "text-blue-500",
-		insight: "A retenção de clientes melhorou 8% após o lançamento do novo programa de fidelidade.",
+		insight: "⁠Grande quantidade de estagiários disponíveis",
 	},
 	{
-		icon: ShoppingBag,
-		color: "text-purple-500",
-		insight: 'A categoria de produto “Eletrônicos” apresenta o maior potencial de crescimento com base nas tendências recentes do mercado.',
-	},
-	{
-		icon: DollarSign,
+		icon: CalendarArrowDown,
 		color: "text-yellow-500",
-		insight: "A otimização da estratégia de preços poderia aumentar potencialmente as margens de lucro gerais em 5-7%.",
+		insight: "3 contratos estão chegando ao fim: CTT002 ,CTT005, CTT007",
 	},
 ];
 
@@ -32,7 +27,7 @@ const AIPoweredInsights = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 1.0 }}
 		>
-			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Insights Baseados em IA</h2>
+			<h2 className='text-xl font-semibold text-gray-100 mb-4'>Sugestões</h2>
 			<div className='space-y-4'>
 				{INSIGHTS.map((item, index) => (
 					<div key={index} className='flex items-center space-x-3'>
