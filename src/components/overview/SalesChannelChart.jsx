@@ -4,10 +4,11 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
 
 const SALES_CHANNEL_DATA = [
-  { name: "Website", value: 45600 },
-  { name: "Mobile App", value: 38200 },
-  { name: "Marketplace", value: 29800 },
-  { name: "Social Media", value: 18700 },
+  { name: "Expert", value: 889 },
+  { name: "Senior", value: 1335 },
+  { name: "Pleno", value: 630 },
+  { name: "Junior", value: 1118 },
+  { name: "Estagiário", value: 947 },
 ];
 
 const SalesChannelChart = () => {
@@ -18,7 +19,7 @@ const SalesChannelChart = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
     >
-      <h2 className='text-lg font-medium mb-4 text-gray-100'>Vendas por Canal</h2>
+      <h2 className='text-lg font-medium mb-4 text-gray-100'>Demandas por Senioridade</h2>
 
       <div className='h-80'>
         <ResponsiveContainer>
